@@ -14,7 +14,7 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #00693e 0%, #005a32 100%);
             min-height: 100vh;
             padding: 20px;
         }
@@ -27,7 +27,7 @@
             overflow: hidden;
         }
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #00693e 0%, #005a32 100%);
             color: white;
             padding: 60px 40px;
             text-align: center;
@@ -50,6 +50,9 @@
             font-size: 1.2em;
             color: #666;
         }
+        .intro p {
+            margin-bottom: 10px;
+        }
         .notebooks {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -66,7 +69,7 @@
         .notebook-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border-color: #667eea;
+            border-color: #00693e;
         }
         .notebook-icon {
             font-size: 3em;
@@ -74,96 +77,326 @@
         }
         .notebook-title {
             font-size: 1.5em;
-            color: #2c3e50;
+            color: #00693e;
             margin-bottom: 15px;
         }
         .notebook-desc {
             color: #666;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        .notebook-features {
+            font-size: 0.9em;
+            color: #555;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
             margin-bottom: 20px;
         }
         .btn {
             display: inline-block;
             padding: 12px 24px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #00693e 0%, #005a32 100%);
             color: white;
             text-decoration: none;
             border-radius: 8px;
             transition: transform 0.2s, box-shadow 0.2s;
             font-weight: 600;
+            margin-right: 10px;
+            margin-top: 10px;
         }
         .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 105, 62, 0.4);
+        }
+        .btn-secondary {
+            background: linear-gradient(135deg, #2d6a4f 0%, #1b4332 100%);
+        }
+        .getting-started {
+            background: linear-gradient(135deg, #d8f3dc 0%, #95d5b2 100%);
+            padding: 40px;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+        .getting-started h2 {
+            color: #00693e;
+            margin-bottom: 20px;
+            font-size: 2em;
+            text-align: center;
+        }
+        .getting-started > p {
+            text-align: center;
+            font-size: 1.1em;
+            color: #1b4332;
+            margin-bottom: 30px;
+        }
+        .options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .option {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .option h3 {
+            color: #00693e;
+            margin-bottom: 15px;
+        }
+        .option p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .learning-path {
+            margin-top: 40px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+        }
+        .learning-path h3 {
+            color: #00693e;
+            margin-bottom: 15px;
+        }
+        .learning-path ol {
+            line-height: 2;
+            color: #555;
+            padding-left: 25px;
+        }
+        .learning-path ol li {
+            margin-bottom: 10px;
         }
         footer {
-            background: #2c3e50;
+            background: #1b4332;
             color: white;
+            padding: 30px 40px;
             text-align: center;
-            padding: 30px;
         }
-        footer a {
-            color: #667eea;
+        .footer-links {
+            margin-top: 20px;
+        }
+        .footer-links a {
+            color: #95d5b2;
             text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.2s;
         }
-        footer a:hover {
+        .footer-links a:hover {
+            color: #d8f3dc;
             text-decoration: underline;
+        }
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            background: #00693e;
+            color: white;
+            border-radius: 20px;
+            font-size: 0.8em;
+            margin-left: 10px;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            .notebooks {
+                grid-template-columns: 1fr;
+            }
+            header, .content, footer {
+                padding: 30px 20px;
+            }
+            .btn {
+                display: block;
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>🤖 Foundations of AI Workshop</h1>
-            <p class="subtitle">Interactive Jupyter Notebooks by Dartmouth Libraries</p>
+            <h1>🧠 Foundations of AI Workshop</h1>
+            <p class="subtitle">Interactive Visualizations for Understanding Artificial Intelligence</p>
+            <p style="margin-top: 20px; opacity: 0.9;">Presented by Dartmouth Libraries</p>
         </header>
         
         <div class="content">
             <div class="intro">
-                <p>Welcome to our comprehensive AI workshop series! Explore the fundamentals of artificial intelligence through interactive notebooks covering machine learning, embeddings, attention mechanisms, and large language models.</p>
+                <p>Welcome! This workshop demystifies AI through hands-on, interactive visualizations.</p>
+                <p>No programming experience required to explore and learn.</p>
             </div>
             
+            <h2 style="text-align: center; margin-bottom: 40px; color: #00693e;">📚 Interactive Notebooks</h2>
+            
             <div class="notebooks">
-                <div class="notebook-card">
-                    <div class="notebook-icon">🎓</div>
-                    <h2 class="notebook-title">1. AI Learning</h2>
-                    <p class="notebook-desc">Introduction to AI concepts, machine learning fundamentals, and getting started with practical examples.</p>
-                    <a href="1_AI_learning.html" class="btn">View Notebook →</a>
-                </div>
-                
-                <div class="notebook-card">
-                    <div class="notebook-icon">📊</div>
-                    <h2 class="notebook-title">2. AI Modeling</h2>
-                    <p class="notebook-desc">Dive into model building, training, and evaluation techniques for AI systems.</p>
-                    <a href="2_AI_modeling.html" class="btn">View Notebook →</a>
-                </div>
-                
-                <div class="notebook-card">
-                    <div class="notebook-icon">🔤</div>
-                    <h2 class="notebook-title">3. Encodings & Embeddings</h2>
-                    <p class="notebook-desc">Learn how text and data are transformed into numerical representations for AI processing.</p>
-                    <a href="3_encodings_embeddings.html" class="btn">View Notebook →</a>
-                </div>
-                
+                <!-- Notebook 1 -->
                 <div class="notebook-card">
                     <div class="notebook-icon">🎯</div>
-                    <h2 class="notebook-title">4. Attention Mechanisms</h2>
-                    <p class="notebook-desc">Understand the attention mechanism that powers modern transformer models.</p>
-                    <a href="4_attention.html" class="btn">View Notebook →</a>
+                    <h3 class="notebook-title">1. AI Learning</h3>
+                    <p class="notebook-desc">
+                        Discover how AI models learn by adjusting parameters. Manipulate weights,
+                        powers, and interactions to see real-time learning in action.
+                    </p>
+                    <div class="notebook-features">
+                        <strong>Interactive elements:</strong> Parameter sliders, 3D data visualization,
+                        accuracy tracking
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <a href="https://nbviewer.org/github/dartmouth-libraries/foundations-of-ai-workshop/blob/main/1_AI_learning.ipynb"
+                           class="btn" target="_blank">📖 View Notebook</a>
+                        <a href="1_AI_learning.html" class="btn btn-secondary" target="_blank">🌐 View HTML</a>
+                    </div>
                 </div>
                 
+                <!-- Notebook 2 -->
+                <div class="notebook-card">
+                    <div class="notebook-icon">🔄</div>
+                    <h3 class="notebook-title">2. AI Training Loop</h3>
+                    <p class="notebook-desc">
+                        Step through the complete AI training cycle: Input → Model → Output →
+                        Error → Learning → Repeat. Understand how all pieces fit together.
+                    </p>
+                    <div class="notebook-features">
+                        <strong>Interactive elements:</strong> Step-by-step navigation, component
+                        highlighting, detailed stage explanations
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <a href="https://nbviewer.org/github/dartmouth-libraries/foundations-of-ai-workshop/blob/main/2_AI_modeling.ipynb"
+                           class="btn" target="_blank">📖 View Notebook</a>
+                        <a href="2_AI_modeling.html" class="btn btn-secondary" target="_blank">🌐 View HTML</a>
+                    </div>
+                </div>
+                
+                <!-- Notebook 3 -->
+                <div class="notebook-card">
+                    <div class="notebook-icon">📊</div>
+                    <h3 class="notebook-title">3. Encodings vs Embeddings</h3>
+                    <p class="notebook-desc">
+                        Explore how computers convert words to numbers. See why embeddings are
+                        "smarter" and how semantic relationships emerge in vector space.
+                    </p>
+                    <div class="notebook-features">
+                        <strong>Interactive elements:</strong> 2D/3D vector visualizations,
+                        similarity comparisons, next-word prediction
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <a href="https://nbviewer.org/github/dartmouth-libraries/foundations-of-ai-workshop/blob/main/3_encodings_embeddings.ipynb"
+                           class="btn" target="_blank">📖 View Notebook</a>
+                        <a href="3_encodings_embeddings.html" class="btn btn-secondary" target="_blank">🌐 View HTML</a>
+                    </div>
+                </div>
+                
+                <!-- Notebook 4 -->
+                <div class="notebook-card">
+                    <div class="notebook-icon">👁️</div>
+                    <h3 class="notebook-title">4. Attention Mechanism</h3>
+                    <p class="notebook-desc">
+                        Visualize the breakthrough behind ChatGPT! Watch how AI "pays attention"
+                        to relevant words through 3D connection visualizations.
+                    </p>
+                    <div class="notebook-features">
+                        <strong>Interactive elements:</strong> 3D attention flows, multi-head
+                        visualization, color-coded relationship types
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <a href="https://nbviewer.org/github/dartmouth-libraries/foundations-of-ai-workshop/blob/main/4_attention.ipynb"
+                           class="btn" target="_blank">📖 View Notebook</a>
+                        <a href="4_attention.html" class="btn btn-secondary" target="_blank">🌐 View HTML</a>
+                    </div>
+                </div>
+                
+                <!-- Notebook 5 -->
                 <div class="notebook-card">
                     <div class="notebook-icon">🚀</div>
-                    <h2 class="notebook-title">5. LLM Modeling</h2>
-                    <p class="notebook-desc">Explore Large Language Models, their architecture, and practical applications.</p>
-                    <a href="5_LLM_modeling.html" class="btn">View Notebook →</a>
+                    <h3 class="notebook-title">5. LLM Development Pipeline</h3>
+                    <p class="notebook-desc">
+                        Journey through building a Large Language Model: from web crawling to
+                        deployment. Understand the massive effort behind systems like ChatGPT.
+                    </p>
+                    <div class="notebook-features">
+                        <strong>Interactive elements:</strong> 14-step pipeline navigation,
+                        stage-by-stage highlighting, comprehensive descriptions
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <a href="https://nbviewer.org/github/dartmouth-libraries/foundations-of-ai-workshop/blob/main/5_LLM_modeling.ipynb"
+                           class="btn" target="_blank">📖 View Notebook</a>
+                        <a href="5_LLM_modeling.html" class="btn btn-secondary" target="_blank">🌐 View HTML</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Getting Started Section -->
+            <div class="getting-started">
+                <h2>🚀 Getting Started</h2>
+                <p>Choose your preferred way to explore these materials:</p>
+                
+                <div class="options">
+                    <div class="option">
+                        <h3>☁️ Run Online (Easiest)</h3>
+                        <p>Launch in your browser - no installation needed!</p>
+                        <a href="https://mybinder.org/v2/gh/dartmouth-libraries/foundations-of-ai-workshop/main"
+                           class="btn" target="_blank">Launch Binder</a>
+                        <p style="font-size: 0.9em; color: #666; margin-top: 10px;">
+                            ⏱️ Takes 1-2 minutes to load
+                        </p>
+                    </div>
+                    
+                    <div class="option">
+                        <h3>💻 Run Locally</h3>
+                        <p>Download and run on your computer for full control.</p>
+                        <a href="https://github.com/dartmouth-libraries/foundations-of-ai-workshop"
+                           class="btn" target="_blank">View on GitHub</a>
+                        <p style="font-size: 0.9em; color: #666; margin-top: 10px;">
+                            Requires Python 3.8+
+                        </p>
+                    </div>
+                    
+                    <div class="option">
+                        <h3>📄 View Static HTML</h3>
+                        <p>Browse pre-rendered versions without running code.</p>
+                        <p style="font-size: 0.9em; color: #666; margin-top: 10px;">
+                            Use the HTML buttons above on each notebook
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="learning-path">
+                    <h3>📖 Recommended Learning Path</h3>
+                    <ol>
+                        <li><strong>AI Learning</strong> - Understand the basics of how AI learns</li>
+                        <li><strong>AI Training Loop</strong> - See the complete training process
+			<li><strong>Encodings vs Embeddings</strong> - Learn how text is processed</li>
+                        <li><strong>Attention Mechanism</strong> - Explore modern AI architectures</li>
+                        <li><strong>LLM Development</strong> - Get the complete picture of building LLMs</li>
+                    </ol>
+                    <p style="margin-top: 15px; color: #666;">
+                        ⏱️ <strong>Estimated time:</strong> 2-3 hours for complete workshop
+                    </p>
                 </div>
             </div>
         </div>
         
         <footer>
-            <p>📚 Created by <a href="https://github.com/Dartmouth-Libraries" target="_blank">Dartmouth Libraries</a></p>
-            <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;">
-                <a href="https://github.com/Dartmouth-Libraries/foundations-of-ai-workshop" target="_blank">View on GitHub</a>
+            <p><strong>Foundations of AI Workshop</strong></p>
+            <p style="margin-top: 10px;">Created by Dartmouth Libraries</p>
+            <p style="margin-top: 15px; opacity: 0.8;">
+                Built with Jupyter, Plotly, Matplotlib, and ipywidgets
+            </p>
+            <div class="footer-links">
+                <a href="https://github.com/dartmouth-libraries/foundations-of-ai-workshop" target="_blank">
+                    📂 GitHub Repository
+                </a>
+                <a href="https://github.com/dartmouth-libraries/foundations-of-ai-workshop/issues" target="_blank">
+                    💬 Report Issues
+                </a>
+                <a href="https://library.dartmouth.edu" target="_blank">
+                    📚 Dartmouth Libraries
+                </a>
+            </div>
+            <p style="margin-top: 20px; font-size: 0.9em; opacity: 0.7;">
+                © 2024 Dartmouth College Libraries. Licensed under MIT License.
             </p>
         </footer>
     </div>
