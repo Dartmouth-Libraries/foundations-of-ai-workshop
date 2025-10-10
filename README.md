@@ -7,7 +7,7 @@ Interactive Jupyter notebooks exploring AI concepts through hands-on visualizati
 **License:** MIT
 
 ## Workshop Notebooks
-
+0. **Setup** (`0_setup.ipynb`) - **START HERE** - Install all required dependencies
 1. **AI Learning** (`1_AI_learning.ipynb`) - How AI models learn from data through parameter adjustment
 2. **AI Training Loop** (`2_AI_modeling.ipynb`) - The complete training cycle from input to learning
 3. **Encodings vs Embeddings** (`3_encodings_embeddings.ipynb`) - How text is represented in AI systems
