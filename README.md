@@ -19,6 +19,7 @@ Interactive Jupyter notebooks exploring AI concepts through hands-on visualizati
 ### Prerequisites
 - Dartmouth NetID and credentials
 - Access to JupyterHub
+- **Recommended Browser: Chrome or Firefox (Safari has known compatibility issues with plotly rendering)
 
 ### Setup Instructions
 
